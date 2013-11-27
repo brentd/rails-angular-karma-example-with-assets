@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.14'
 
 gem 'sqlite3'
-gem 'jquery-fileupload-rails', '0.4.1'
-gem 's3direct', github: 'Kajabi/s3direct'
 gem 'jquery-rails'
 
 group :assets do
@@ -17,5 +15,7 @@ group :assets do
   gem 'rails-assets-angular'
 end
 
-gem 'rails-assets-angular-mocks'
-gem 'rails-assets-angular-scenario'
+group :test, :development do
+  gem 'rails-assets-angular-mocks'
+  gem 'rails-assets-angular-scenario'
+end

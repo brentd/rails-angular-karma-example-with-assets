@@ -31,6 +31,10 @@ module Karma
               basePath : '/',
               frameworks : ["#{adapter}"],
               files : #{files},
+              preprocessors: {
+                '**/*.coffee': 'coffee',
+                '**/*.html': 'html2js'
+              },
               exclude : [],
               autoWatch : #{!opts[:single_run]},
               browsers : ['Chrome'],
